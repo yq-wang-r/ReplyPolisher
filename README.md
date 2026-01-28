@@ -4,7 +4,7 @@
 ![React](https://img.shields.io/badge/frontend-React_18-61DAFB.svg)
 ![Flutter](https://img.shields.io/badge/desktop-Flutter-02569B.svg)
 
-**ReplyPolisher** 是一个跨平台的 AI 辅助写作工具，旨在将您的粗糙草稿转化为得体、专业的职场回复。
+**ReplyPolisher** 是一个跨平台的 AI 辅助写作工具，旨在将您的粗糙草稿转化为得体、专业的职场/学术场/实验室场合的回复。
 
 无论您是面对导师、老板、客户还是同事，只需输入您的草稿和内心真实想法（潜台词），ReplyPolisher 就能根据选定的角色口吻（Persona），利用 Google Gemini 或 OpenAI 兼容API格式的模型为您生成完美的回复。
 
