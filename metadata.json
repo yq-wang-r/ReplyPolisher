@@ -1,0 +1,5 @@
+{
+  "name": "ReplyPolisher",
+  "description": "A professional text rewriting tool that polishes your drafts into specific personas using Gemini AI.",
+  "requestFramePermissions": []
+}
