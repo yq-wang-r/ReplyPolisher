@@ -8,9 +8,7 @@
 
 无论您是面对导师、老板、客户还是同事，只需输入您的草稿和内心真实想法（潜台词），ReplyPolisher 就能根据选定的角色口吻（Persona），利用 Google Gemini 或 OpenAI 兼容模型为您生成完美的回复。
 
-<img width="1037" height="684" alt="image" src="https://github.com/user-attachments/assets/9e4c7509-2adf-4595-bbaf-a8143ecd0403" />
-
-*(建议在此处上传一张运行截图)*
+<img width="537" height="384" alt="image" src="https://github.com/user-attachments/assets/9e4c7509-2adf-4595-bbaf-a8143ecd0403" />
 
 ## ✨ 核心功能
 
