@@ -6,7 +6,7 @@
 
 **ReplyPolisher** 是一个跨平台的 AI 辅助写作工具，旨在将您的粗糙草稿转化为得体、专业的职场回复。
 
-无论您是面对导师、老板、客户还是同事，只需输入您的草稿和内心真实想法（潜台词），ReplyPolisher 就能根据选定的角色口吻（Persona），利用 Google Gemini 或 OpenAI 兼容模型为您生成完美的回复。
+无论您是面对导师、老板、客户还是同事，只需输入您的草稿和内心真实想法（潜台词），ReplyPolisher 就能根据选定的角色口吻（Persona），利用 Google Gemini 或 OpenAI 兼容API格式的模型为您生成完美的回复。
 
 <img width="537" height="384" alt="image" src="https://github.com/user-attachments/assets/9e4c7509-2adf-4595-bbaf-a8143ecd0403" />
 
