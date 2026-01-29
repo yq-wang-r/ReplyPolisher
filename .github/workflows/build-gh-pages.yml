@@ -1,0 +1,40 @@
+name: Build and Deploy (gh-pages)
+
+on:
+  # 当代码推送到 main 分支时触发
+  push:
+    branches:
+      - main
+  # 允许手动触发
+  workflow_dispatch:
+
+# 赋予 GITHUB_TOKEN 写权限，用于部署到 gh-pages 分支
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' # 开启 npm 缓存，加速构建
+
+      - name: Install Dependencies
+        run: npm ci
+        # 如果 npm ci 报错（通常因为 lock 文件不同步），可以改用 npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # 你指定的输出目录
+          force_orphan: true
