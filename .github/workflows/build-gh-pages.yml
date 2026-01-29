@@ -1,4 +1,4 @@
-name: Build and Deploy (gh-pages)
+name: Build and Deploy (gh-pages) latest
 
 on:
   # 当代码推送到 main 分支时触发
