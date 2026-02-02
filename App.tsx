@@ -54,11 +54,18 @@ const App: React.FC = () => {
     return (saved as Persona) || Persona.BOSS;
   });
 
+  const [provider, setProvider] = useState<AIProvider>(() => {
+    const saved = localStorage.getItem('replyPolisher_provider');
+    if (saved && Object.values(AIProvider).includes(saved as AIProvider)) {
+      return saved as AIProvider;
+    }
+    return AIProvider.GOOGLE;
+  });
+
   const [selectedPersona, setSelectedPersona] = useState<Persona>(defaultPersona);
   const [isLoading, setIsLoading] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [language, setLanguage] = useState<AppLanguage>(AppLanguage.CHINESE);
-  const [provider, setProvider] = useState<AIProvider>(AIProvider.GOOGLE);
   
   const [appConfig, setAppConfig] = useState<Record<AIProvider, ProviderConfig>>(() => {
     // Load from localStorage on initial render
@@ -96,6 +103,11 @@ const App: React.FC = () => {
   useEffect(() => {
     localStorage.setItem('replyPolisherConfig', JSON.stringify(appConfig));
   }, [appConfig]);
+
+  // Persist provider changes
+  useEffect(() => {
+    localStorage.setItem('replyPolisher_provider', provider);
+  }, [provider]);
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === AppLanguage.ENGLISH ? AppLanguage.CHINESE : AppLanguage.ENGLISH);
